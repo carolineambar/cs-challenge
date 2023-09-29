@@ -1,14 +1,15 @@
-import ButtonSearch from "./components/Button/Button"
-import InputSearch from "./components/Input/Input"
-import { Container } from './App.styled'
+import React from "react"
+import {Container } from './App.styled'
+import GlobalStyle from "./config/GlobalStyle"
+import Home from "./pages/Home/Home"
 
 function App() {
   
 
   return (
     <Container>
-      <InputSearch />
-      <ButtonSearch />
+      <GlobalStyle />
+      <Home />
     </Container>
   )
 }
