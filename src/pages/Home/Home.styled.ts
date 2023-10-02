@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from "react-router-dom"
 
 export const Container = styled.div`
   display: flex;
@@ -15,19 +16,14 @@ export const SearchWrapper = styled.header`
   justify-content: center;
 `;
 
-export const SearchBar = styled.input`
+export const SearchInput = styled.input`
   width: 400px;
   height: 30px;
   padding-left: 10px;
 `;
 
-export const SearchButton = styled.button`
+export const SearchButton = styled(Link)`
   width: 80px;
   height: 30px;
+  cursor: pointer;
 `;
-
-export const ResultsList = styled.ul`
-padding: 30px;
-`;
-
-export const Results = styled.li``;
