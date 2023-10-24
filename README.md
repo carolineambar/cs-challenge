@@ -13,7 +13,7 @@ Esse projeto foi criado com React + Vite (https://pt.vitejs.dev/guide/).
 
 ## Começando com React + Vite
 
-Você precisa ter [NPM](https://nodejs.org/en/) ou [Yarn](https://yarnpkg.com/pt-BR/) instalado para rodar essa aplicação.
+Você precisa ter [NPM](https://nodejs.org/en/) instalado para rodar essa aplicação.
 
 #### Clone esse projeto
 
