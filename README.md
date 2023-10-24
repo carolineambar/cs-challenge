@@ -2,7 +2,7 @@
 
 ## Descrição do Projeto
 
-Esse projeto foi realizado para testar meus conhecimentos utilizando Styled Components para estilização: https://styled-components.com/ e TypeScript e foi baseado no seguinte desafio: [https://github.com/1STi/desafio-frontend](https://github.com/concretesolutions/recrutamento-fe).
+Esse projeto foi realizado para testar meus conhecimentos utilizando Styled Components para estilização: https://styled-components.com/ e TypeScript com a biblioteca React.Js e foi baseado no seguinte desafio: [https://github.com/1STi/desafio-frontend](https://github.com/concretesolutions/recrutamento-fe).
 
 ## Tecnologias usadas:
 
