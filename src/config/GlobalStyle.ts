@@ -3,6 +3,10 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
   :root {
     --white: #FFFFFF;
+    --grey: #808B96;
+    --light-grey: #ABB2B9;
+    --black: #000000;
+    --blue: #4682B4;
   }
 
   * {
@@ -10,9 +14,11 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     border: none;
-    font-family: "Inter",sans-serif;
-    height: 100%;
-    width: 100%;
+    font-family: 'Rubik', sans-serif;
+      a {
+        text-decoration: none; 
+        color: inherit;
+    }
   }
 
   body {
