@@ -21,7 +21,7 @@ export const SearchField = styled.input`
   padding-left: 10px;
   font-size: 17px;
   border-radius: 4px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--light-grey);
   outline: none;
 
     &::placeholder {

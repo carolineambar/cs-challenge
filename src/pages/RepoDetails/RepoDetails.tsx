@@ -28,16 +28,16 @@ const RepoDetails = () => {
     <Container>
       <p>Detalhes do Repositório</p>
       <RepoWrapper>
-        <p><strong>Nome:</strong> {repoDetails.name}</p>
+        <p>Nome: {repoDetails.name}</p>
         {repoDetails.description ? (
-              <p><strong>Descrição:</strong> {repoDetails.description}</p>
+              <p>Descrição: {repoDetails.description}</p>
               ) : (
-                <p><strong>Descrição:</strong> Sem descrição</p>
+                <p>Descrição: Sem descrição</p>
                 )}
         {repoDetails.language ? (
-              <p><strong>Linguagem:</strong> {repoDetails.language}</p>
+              <p>Linguagem: {repoDetails.language}</p>
               ) : (
-                <p><strong>Linguagem:</strong> Não especificado</p>
+                <p>Linguagem: Não especificado</p>
                 )}
         <p>&#9733;: {repoDetails.stargazers_count}</p>
       </RepoWrapper>
