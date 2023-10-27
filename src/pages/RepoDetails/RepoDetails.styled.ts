@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.ul`
@@ -25,7 +26,7 @@ export const LinkWrapper = styled.div`
     gap: 20px;
 `;
 
-export const LinkGithub = styled.div`
+export const LinkGithub = styled.a`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,7 +40,7 @@ export const LinkGithub = styled.div`
     font-size: 20px;
 `;
 
-export const LinkVoltar = styled.ul`
+export const LinkVoltar = styled(Link)`
     display: flex;
     align-items: center;
     justify-content: center;

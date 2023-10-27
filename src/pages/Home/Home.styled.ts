@@ -1,18 +1,16 @@
 import styled from 'styled-components';
-import { Link } from "react-router-dom";
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
 `;
 
-export const SearchWrapper = styled.header`
+export const SearchForm = styled.form`
   display: flex;
   gap: 10px;
   align-items: center;
   justify-content: center;
   font-size: 40px;
-  
 `;
 
 export const SearchField = styled.input`
@@ -29,9 +27,8 @@ export const SearchField = styled.input`
     }
 `;
 
-export const SearchButton = styled(Link)`
-  width: 110px;
-  height: 30px;
+export const SearchButton = styled.button`
+  padding: 1rem;
   font-size: 19px;
   border-radius: 4px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);

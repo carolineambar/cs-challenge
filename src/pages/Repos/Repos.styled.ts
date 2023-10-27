@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -13,7 +14,7 @@ export const Container = styled.div`
     width: 500px;
 `;
 
-export const ButtonWrapper = styled.div`
+export const OrderingContainer = styled.div`
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -21,22 +22,22 @@ export const ButtonWrapper = styled.div`
     gap: 10px;
 `;
 
-export const StarButton = styled.div`
+export const StarButtonContainer = styled.div`
     display: flex;
     flex-direction: center;
     gap: 10px;
-    
-    button {
-        padding: 5px 10px;
-        font-size: 16px;
-        border-radius: 10px;
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-        background-color: var(--light-grey);
-        cursor: pointer;
-    }
 `;
 
-export const LinkRepo = styled.div`
+export const StarButton = styled.button`
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    background-color: var(--light-grey);
+    cursor: pointer;
+`;
+
+export const ReposList = styled.ul`
     display: flex;
     flex-direction: column;
     font-size: 20px;
@@ -44,7 +45,7 @@ export const LinkRepo = styled.div`
     list-style: none;
 `;
 
-export const LinkVoltar = styled.div`
+export const LinkVoltar = styled(Link)`
     display: flex;
     align-items: center;
     justify-content: center;
