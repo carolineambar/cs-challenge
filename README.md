@@ -1,27 +1,87 @@
-# React + TypeScript + Vite
+# CS Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descrição do Projeto
 
-Currently, two official plugins are available:
+Esse projeto foi realizado para testar meus conhecimentos utilizando Styled Components para estilização: https://styled-components.com/ e TypeScript com a biblioteca React.Js e foi baseado no seguinte desafio: [https://github.com/1STi/desafio-frontend](https://github.com/concretesolutions/recrutamento-fe).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologias usadas:
 
-## Expanding the ESLint configuration
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="40" height="40" /> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" width="40" height="40" />
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+Esse projeto foi criado com React + Vite (https://pt.vitejs.dev/guide/).
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+## Começando com React + Vite
+
+Você precisa ter [NPM](https://nodejs.org/en/) instalado para rodar essa aplicação.
+
+#### Clone esse projeto
+
+```
+  git clone https://github.com/carolineambar/cs-challenge
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+#### Entre na pasta
+
+```
+  cd cs-challenge
+```
+
+#### Instale dependencias
+
+```
+ npm create vite@latest my-react-app -- --template react
+```
+
+#### Para rodar!
+
+```
+  npm run dev
+```
+
+## Estrutura do projeto
+
+```shell
+|-- public
+|-- src
+|---- assets
+|---- components
+|---- config
+|------ GlobalStyle.ts
+|---- pages
+|------ Home
+|-------- Home.styled.ts
+|-------- Home.tsx
+|------ RepoDetails
+|-------- RepoDetails.styled.ts
+|-------- RepoDetails.tsx
+|------ Repos
+|-------- Repos.styled.ts
+|-------- Repos.tsx
+|------ User
+|-------- User.styled.ts
+|-------- User.tsx
+|---- router
+|------ Router.tsx
+|---- App.styled.ts
+|---- App.tsx
+|---- main.tsx
+|---- vite-env.d.ts
+|-- .eslintrc
+|-- .gitignore
+|-- index.html
+|-- package-lock.json
+|-- package.json
+|-- README.md
+|-- tsconfig.json
+|-- tsconfig.node.json
+|-- vite.config.ts
+```
+
+Na pasta ```src``` estão as pastas de ```pages``` onde estão os arquivos contendo as funcionalidades da aplicação (documentos .tsx) e estilos das páginas com Styled Components nos documentos ts, na pasta ```router``` foi configurado as rotas do projeto e o arquivo ```App.tsx``` onde ficou a aplicação principal.
+
+Os demais arquivos são de configuração do Projeto, como o ```package.json``` que é de configuração do Servidor.
+
+## Futuras melhorias 
+
+Como futura melhoria irei ajustar o desing e estilo do projeto, bem como, a estrutura do projeto.
