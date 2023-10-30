@@ -11,6 +11,11 @@ Esse projeto foi realizado para testar meus conhecimentos utilizando Styled Comp
 
 Esse projeto foi criado com React + Vite (https://pt.vitejs.dev/guide/).
 
+## Vercel
+
+É possível visualizar a aplicação através do link a seguir [Vercel - CS Challenge](cs-challenge-zeta.vercel.app).
+Caso opte por visualizar de forma local, seguir os passos abaixo. 
+
 ## Começando com React + Vite
 
 Você precisa ter [NPM](https://nodejs.org/en/) instalado para rodar essa aplicação.
