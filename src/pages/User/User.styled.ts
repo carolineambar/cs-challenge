@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 export const Results = styled.ul`
     display: flex;
     justify-content: center;
@@ -28,16 +28,11 @@ export const UserInfo = styled.div`
     margin: 100px;
     display: flex;
     flex-direction: column;
-
-        p {
-            margin: 20px 0;
-        }
+    gap: 20px;
 `;
 
-export const NotFoundText = styled.div`
+export const NotFoundText = styled.span`
     color: var(--light-grey);
-    margin: 20px 0;
-
 `;
 
 export const LinkWrapper = styled.div`
@@ -46,7 +41,7 @@ export const LinkWrapper = styled.div`
     gap: 20px;
 `;
 
-export const LinkRepo = styled.div`
+export const LinkRepo = styled(Link)`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,12 +54,12 @@ export const LinkRepo = styled.div`
     width: 220px;
 `;
 
-export const LinkText = styled.p`
+export const Text = styled.p`
     text-align: center;
     margin: 0;
 `;
 
-export const LinkVoltar = styled.div`
+export const LinkVoltar = styled(Link)`
     display: flex;
     align-items: center;
     justify-content: center;

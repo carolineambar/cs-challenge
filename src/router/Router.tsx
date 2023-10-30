@@ -17,22 +17,20 @@ const Router = () => (
                 element={<User/>}
             />
 
-        <Route
-            path="/users/:id/repos"
-            element={<Repos />}
-        />
+            <Route
+                path="/users/:id/repos"
+                element={<Repos />}
+            />
+                
+            <Route
+                path="/users/:id/repos/:repoId"
+                element={<RepoDetails />}
+            />
             
-        <Route
-            path="/users/:id/repos/:repoId"
-            element={<RepoDetails />}
-        />
-        
-        <Route
-            path="*"
-            element={<p>Não foi possível concluir sua busca, tente novamente</p>}
-        />
-
-
+            <Route
+                path="*"
+                element={<p>Não foi possível concluir sua busca, tente novamente</p>}
+            />
         </Routes>
     </BrowserRouter>
 )

@@ -15,10 +15,11 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     border: none;
     font-family: 'Rubik', sans-serif;
-      a {
-        text-decoration: none; 
-        color: inherit;
-    }
+  }
+
+  a {
+    text-decoration: none; 
+    color: inherit;
   }
 
   body {

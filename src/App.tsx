@@ -3,8 +3,6 @@ import GlobalStyle from "./config/GlobalStyle"
 import Router from "./router/Router"
 
 function App() {
-  
-
   return (
     <Container>
       <GlobalStyle />

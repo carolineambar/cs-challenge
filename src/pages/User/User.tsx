@@ -1,43 +1,29 @@
-import { useParams, Link } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import { useEffect, useState } from 'react';
-import { Results, UserInfoContainer, Avatar,  UserInfo, NotFoundText, LinkWrapper, LinkRepo, LinkText, LinkVoltar, UserNotFound } from './User.styled'
+import { Results, UserInfoContainer, Avatar,  UserInfo, NotFoundText, LinkWrapper, LinkRepo, Text, LinkVoltar, UserNotFound } from './User.styled'
+import { url } from "../../constants";
 
-const url = 'https://api.github.com/';
+type User = {
+    followers: number,
+    following: number,
+    avatar_url: string,
+    email: string,
+    bio: string,
+}
 
 const User = () => {
-
-    const {id} = useParams()
-    const [userData, setUserData] = useState({
-        followers: 0,
-        following: 0,
-        avatar_url: '',
-        email: '',
-        bio: '',
-      })
-
-    useEffect(() => {
-        const getUsers = async () => {
-            const resposta = await fetch(`${url}users/${id}`)
-            const dados = await resposta.json()
-            console.log(dados)
-            setUserData(dados)
-        }
-        
-    getUsers()
-    }, [id])
-
-    const [userExists, setUserExists] = useState(true);
+    const { id } = useParams()
+    const [userData, setUserData] = useState<User>()
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
         const getUsers = async () => {
             const resposta = await fetch(`${url}users/${id}`);
-            if (resposta.status === 404) {
-                setUserExists(false);
-                } else {
-                    const dados = await resposta.json();
-                    console.log(dados);
-                    setUserData(dados);
-                }
+            if(resposta.ok) {
+                const dados = await resposta.json();
+                setUserData(dados);
+            }
+            setIsLoading(false)
         }
     
         getUsers();
@@ -46,49 +32,36 @@ const User = () => {
     return (
         <Results>
             <UserInfoContainer>
-            {userExists ? (
-                <>
-                    <Avatar src={userData.avatar_url} />
-                    <UserInfo>
-                        <p>Usuário: {id}</p>
-                        <p>Seguidores: {userData.followers}</p>
-                        <p>Seguindo: {userData.following}</p>
-                        {userData.email ? (
-                            <p>E-mail: {userData.email}</p>
-                            ) : (
-                                <NotFoundText>E-mail: Não encontrado </NotFoundText>
-                            )}
-                        {userData.bio ? (
-                            <p>Bio: {userData.bio}</p>
-                            ) : (
-                                <NotFoundText>Bio: Não encontrado </NotFoundText>
-                            )}
-                        <LinkWrapper>
-                            <LinkRepo>  
-                                <Link to={`/users/${id}/repos`}>
-                                    <LinkText>Ver Repositórios</LinkText>
-                                </Link>
-                            </LinkRepo>
-                             
-                            <LinkVoltar>
-                                <Link to='/'>
+                {isLoading && (<p>Carregando...</p>)}
+                {!isLoading && !userData && (
+                    <UserNotFound>
+                        <Text>O usuário não foi encontrado.</Text>
+                        <LinkVoltar to='/'>
+                            Voltar
+                        </LinkVoltar>
+                    </UserNotFound>
+                )}
+                {userData && (
+                    <>
+                        <Avatar src={userData.avatar_url} />
+                        <UserInfo>
+                            <p>Usuário: {id}</p>
+                            <p>Seguidores: {userData.followers}</p>
+                            <p>Seguindo: {userData.following}</p>
+                            <p>E-mail: {userData.email || <NotFoundText>Não encontrado</NotFoundText>}</p>
+                            <p>Bio: {userData.bio || <NotFoundText>Não encontrado </NotFoundText>}</p>
+                            <LinkWrapper>
+                                <LinkRepo to={`/users/${id}/repos`}>  
+                                    <Text>Ver Repositórios</Text>
+                                </LinkRepo>
+                                
+                                <LinkVoltar to="/">
                                     Voltar
-                                </Link>
-                            </LinkVoltar>
-                        </LinkWrapper>
-                                     
-                    </UserInfo>
-                </>
-            ) : (
-                <UserNotFound>
-                    <LinkText>O usuário não foi encontrado.</LinkText>
-                    <LinkVoltar>
-                    <Link to='/'>
-                        Voltar
-                    </Link>
-                    </LinkVoltar>
-                </UserNotFound>
-            )}
+                                </LinkVoltar>
+                            </LinkWrapper>
+                        </UserInfo>
+                    </>
+                )}
             </UserInfoContainer>
         </Results>
     );
