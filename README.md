@@ -22,7 +22,7 @@ Caso opte por visualizar de forma local, seguir os passos abaixo.
 
 ## Começando com React + Vite
 
-Você precisa ter [NPM](https://nodejs.org/en/) instalado para rodar essa aplicação.
+Você precisa ter [NPM](https://www.npmjs.com/) instalado para rodar essa aplicação.
 
 #### Clone esse projeto
 
