@@ -4,6 +4,10 @@
 
 Esse projeto foi realizado para testar meus conhecimentos utilizando Styled Components para estilização: https://styled-components.com/ e TypeScript com a biblioteca React.Js e foi baseado no seguinte desafio: [https://github.com/1STi/desafio-frontend](https://github.com/concretesolutions/recrutamento-fe).
 
+### Proposta:
+
+Implementar uma aplicação client-side, que consulte a API do GitHub e mostre os repositórios mais populares de um determinado usuário.
+
 ## Tecnologias usadas:
 
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="40" height="40" /> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" width="40" height="40" />
@@ -13,7 +17,7 @@ Esse projeto foi criado com React + Vite (https://pt.vitejs.dev/guide/).
 
 ## Vercel
 
-É possível visualizar a aplicação através do link a seguir [Vercel - CS Challenge](cs-challenge-zeta.vercel.app).
+É possível visualizar a aplicação através do link a seguir [Vercel - CS Challenge](https://cs-challenge-zeta.vercel.app/).
 Caso opte por visualizar de forma local, seguir os passos abaixo. 
 
 ## Começando com React + Vite
